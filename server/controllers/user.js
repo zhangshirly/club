@@ -214,7 +214,7 @@ function getUserActivity(userId, beforeTime, limit, callback) {
 
 function setUserWechatLink (account) {
     var APPID = "appid=" + config.wechat_validate.appid;
-    var REDIRECT_URI = "&redirect_uri=http://imweb.io/wechatBind";
+    var REDIRECT_URI = "&redirect_uri=http://tuateam.org/wechatBind";
     var STATE = "&state=" + account;
     return "https://open.weixin.qq.com/connect/oauth2/authorize?" + APPID + REDIRECT_URI + "&response_type=code&scope=snsapi_userinfo" + STATE + "#wechat_redirect";
 }

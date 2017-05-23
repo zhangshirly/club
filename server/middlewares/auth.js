@@ -65,10 +65,10 @@ function gen_session(user, res) {
 function gen_auth(key, token, res) {
     // var auth_token = user._id + '$$$$'; // 以后可能会存储更多信息，用 $$$$ 来分隔
     var opts = {
-        path: 'iconfont.imweb.io',
+        path: 'tuateam.org',
         // maxAge: 1000 * 60 * 60 * 24 * 30, //cookie 有效期30天
         httpOnly: true,
-        domain: '.imweb.io',
+        domain: '.tuateam.org',
         secret: config.secretKey
     };
 
@@ -78,7 +78,7 @@ function gen_auth(key, token, res) {
 function clear_auth(key, res) {
     // var auth_token = user._id + '$$$$'; // 以后可能会存储更多信息，用 $$$$ 来分隔
     var opts = {
-        domain: '.imweb.io'
+        domain: '.tuateam.org'
     };
 
     res.clearCookie(key, opts);

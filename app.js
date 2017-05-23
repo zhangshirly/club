@@ -143,8 +143,6 @@ app.use('/api/v1', cors(), apiRouterV1);
 
 // wechat development
 app.use('/wechat', wechat(config.wechat_validate.token, wechatCenter.all));
-// wechat2 imweb订阅号
-app.use('/wechat2', wechat(config.wechat2_validate.token, wechatCenter.all));
 
 // error handler
 if (config.debug) {

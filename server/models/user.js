@@ -53,7 +53,7 @@ var UserSchema = new Schema({
     evernoteAccessToken: {type: String}, //新增evernote支持 for marktang
     yinxiangAccessToken: {type: String}, //新增evernote支持 for marktang
     evernoteType: {type: String, default: 'yinxiang'}, //新增evernote支持 for marktang
-    wechatId: {type: String, default: ''} //新增wechatId for 微信用户对imweb公众号的唯一openid
+    wechatId: {type: String, default: ''} //新增wechatId for 微信用户对公众号的唯一openid
 });
 
 UserSchema.virtual('avatar_url').get(function () {

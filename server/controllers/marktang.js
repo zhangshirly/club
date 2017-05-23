@@ -1,7 +1,6 @@
 /*
  * marktang - controllers/marktang.js
  *
- * info: used for md.imweb.io
  * author: henry
  * date: 2015-1-22
  */
@@ -46,7 +45,6 @@ var evernoteMap = {
  }
  * */
 
-//准备把md.imweb.io首页用这个函数包裹一下
 function index(req, res, next){
     var user = req.session.user;
     var ep = new EventProxy();
@@ -127,7 +125,7 @@ function evernote(req, res, next){
     evernoteParam.serviceHost = host;
 
     var evernoteClient = new Evernote.Client(evernoteParam);
-    evernoteClient.getRequestToken('http://test.imweb.io/marktang/evernote_callback', function(error, oauthToken, oauthTokenSecret, results) {
+    evernoteClient.getRequestToken('http://tuateam.org/marktang/evernote_callback', function(error, oauthToken, oauthTokenSecret, results) {
         // store tokens in the session
         // and then redirect to client.getAuthorizeUrl(oauthToken)
         if (error){
@@ -206,7 +204,7 @@ function ret(type, data, res){
 * */
 function save(req, res, next){
     var note = {};
-    note.title = req.body.title.trim() || 'Title from imweb.io';
+    note.title = req.body.title.trim() || 'Title from tuateam.org';
     note.content = req.body.content || 'test';
     note.html = req.body.html || '<span>test</span>';
     note.id = req.body.id || '';

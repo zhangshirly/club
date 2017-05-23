@@ -253,10 +253,10 @@ exports.sendDailyPush = function (data) {
         siteUrl: SITE_ROOT_URL
     });
     var to = data.user.email;
-    var subjectTpl = 'imweb每日精化';
+    var subjectTpl = '[Tuateam]每日精化';
     var subject = _.template(subjectTpl)(data);
     var htmlTpl = [
-        '<p>imweb团队新文章TOP</p>',
+        '<p>Tuateam团队新文章TOP</p>',
         '<% for(var i in teamTopic) { var topic = teamTopic[i]; %>',
         '<p>',
             '<a href="<%=siteUrl%>/topic/<%=topic._id%>"><%=topic.title%></a>',

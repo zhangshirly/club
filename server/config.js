@@ -15,11 +15,11 @@ var config = {
 
     name: '腾讯OMG前端团队 Tuateam | blog | 团队博客', // 社区名字
     description: 'Web前端 腾讯Tuateam 团队社区', // 社区的描述
-    keywords: '前端交流,前端社区,前端,iconfont,javascript,html,css,webfront,nodejs, node, express, connect, socket.io, lego.imweb.io',
+    keywords: '前端交流,前端社区,前端,iconfont,javascript,html,css,webfront,nodejs, node, express, connect, socket.io',
 
     // 添加到 html head 中的信息
     site_headers: [
-        '<meta name="author" content="imwebteam@tencent" />',
+        '<meta name="author" content="tuateam@tencent" />',
         '<meta property="wb:webmaster" content="f823bb51f1b4e265" />'
 
     ],
@@ -90,7 +90,7 @@ var config = {
     GITHUB_OAUTH: {
         clientID: 'a32d122e769fae39b898',
         clientSecret: '9cd819a15a6e886077b5a937aa0e1b8aac55f859',
-        callbackURL: 'http://imweb.io/auth/github/callback'
+        callbackURL: 'http://tuateam.org/auth/github/callback'
     },
     //本地测试github
     TEST_GITHUB_OAUTH: {
@@ -183,19 +183,15 @@ var config = {
     weibo: {
         appKey: '3489481381',
         appSecret: '52410f54674964564a475afc64511e5d',
-        authCallback: 'http://imweb.io/auth/weibo/auth_back'
+        authCallback: 'http://tuateam.org/auth/weibo/auth_back'
     },
     setting_binding_page: '/setting/binding',
     wechat_validate: {
-        token: 'wechatimwebio',
+        token: 'wechattuateam',
         appid: 'wx1b2c5479b082f081',
         encodingAESKey: 'ebc7f2795b78e528ea9535917850e8c2'
     },
-    wechat2_validate: {
-        token: 'wechat2imwebio',
-        appid: 'wxd5841c34c4a7470a',
-        encodingAESKey: '0cf188cd14316fa0666d709ba3465c4b'
-    }
+    wechat_push_num: 1
 };
 
 config.tabsMap = {};

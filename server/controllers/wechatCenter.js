@@ -16,25 +16,16 @@ var wechatValidate = config.wechat_validate;
 var api = new WechatAPI(wechatValidate.appid, wechatValidate.encodingAESKey);
 
 exports.all = function(req, res, next) {
-    // 路径为/wechat则为imweb服务号，使用wechat_validate配置
-    // 路径为/wechat2则为imweb订阅号，使用wechat2_validate配置
+    // 路径为/wechat, 使用wechat_validate配置
     var reqPath = url.parse(req.originalUrl).pathname;
-    var pushNum = 3;
-    if (reqPath.indexOf('/wechat2') >= 0) {
-        wechatValidate = config.wechat2_validate;
-        pushNum = 1;
-    } else {
-        wechatValidate = config.wechat_validate;
-    }
-    api = new WechatAPI(wechatValidate.appid, wechatValidate.encodingAESKey);
-
+    
     // 微信输入信息都在req.weixin上
     var message = req.weixin;
     var ep = new EventProxy();
     var recommendNum = 30;
     var pushOpt = {
-        num: pushNum,
-        defaultPicurl: 'http://imweb.io/public/images/sign-banner.png',
+        num: config.wechat_push_num,
+        defaultPicurl: 'http://tuateam.org/public/images/sign-banner.png',
         scene: 'massSend',
         sort: '-top -last_reply_at'
     };
@@ -170,28 +161,20 @@ exports.all = function(req, res, next) {
         res.reply('createMenu');
         var menu = {
             "button": [{
-                "name": "IMWEB",
+                "name": "Tuateam",
                 "sub_button": [{
                     "type": "view",
-                    "name": "IMWEB社区",
-                    "url": "http://imweb.io/"
-                }, {
-                    "type": "view",
-                    "name": "Lego",
-                    "url": "http://lego.imweb.io/"
+                    "name": "Tuateam社区",
+                    "url": "http://tuateam.org/"
                 }, {
                     "type": "view",
                     "name": "GitHub",
-                    "url": "https://github.com/imweb/"
+                    "url": "https://github.com/tuateam/"
                 }]
             }, {
                 "type": "view",
                 "name": "招聘",
                 "url": "http://www.lagou.com/jobs/1715898.html"
-            }, {
-                "type": "view",
-                "name": "关于我们",
-                "url": "http://imweb.github.io/"
             }]
         };
         api.createMenu(menu, function(err, result) {
@@ -223,10 +206,10 @@ exports.all = function(req, res, next) {
     } else if ((message.MsgType == 'event') && (message.Event == 'subscribe')) {
         //新用户关注
         res.reply([{
-            title: 'welcome to imweb!',
-            description: 'imweb前端团队，前端可以更有意思，点击前往团队社区imweb.io。',
-            picurl: 'http://imweb.io/public/images/logo-cover.png',
-            url: 'http://imweb.io/'
+            title: 'welcome to Tuateam!',
+            description: '前端资讯，有趣解读，尽在Tuateam',
+            picurl: 'http://tuateam.org/public/images/logo-cover.png',
+            url: 'http://tuateam.org/'
         }]);
     } else {
         //默认回复

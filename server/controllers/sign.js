@@ -198,7 +198,7 @@ exports.login = function(req, res, next) {
     var pass = validator.trim(req.body.pass);
     var ep = new eventproxy();
     var cookieOpt = {
-        domain: 'iconfont.imweb.io',
+        domain: 'tuateam.org',
         path: '/',
         maxAge: 1000 * 60 * 60 * 24 * 30, //cookie 有效期30天
         signed: true,
