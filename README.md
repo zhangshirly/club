@@ -22,25 +22,38 @@ Nodeclub 是使用 **Node.js** 和 **MongoDB** 开发的社区系统，界面优
 
 ## 安装部署
 
-*不保证 Windows 系统的兼容性*
+```
+
+要求：node 版本 < 7
 
 ```
-1. install `node.js` `mongodb`
-2. run mongod
-3. `$ make install` 安装 Nodeclub 的依赖包
-4. `$ make test` 确保各项服务都正常
-5. `$ node app.js`
-6. visit `localhost:3000`
-7. done!
+npm install
 ```
-note: mathmode depends on texlive texlive-latex-extra graphicsmagick
 
 ## 开发调试
 ```bash
 $gulp dev 或 gulp 	//启动watch开发调试
 $gulp dist //构建打包并自动部署发布
 ```
-### 开发环境管理员账号： aaa   密码： 123456
+### 开发环境管理员账号： aaa   密码： 123456 
+自己在mongodb中添加账号信息调试
+
+## 运行
+双击执行db_start.bat
+```
+node app
+```
+
+## 部署至服务器
+
+双击执行windows_deploy_min.bat
+
+## 服务器启动
+
+```
+./start.sh
+```
+
 
 ## 其他
 
