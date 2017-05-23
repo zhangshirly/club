@@ -72,8 +72,8 @@ var config = {
         port: 465,
         secureConnection: true,
         auth: {
-            user: '3454919700@qq.com',
-            pass: 'tuateam2017'
+            user: '842280370@qq.com',
+            pass: 'ealftafabmidbdge'
         }
     },
     //weibo app key

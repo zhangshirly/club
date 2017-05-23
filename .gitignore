@@ -8,6 +8,5 @@ source/javascripts/template/*.js
 *.name
 .idea
 .idea/jsLibraryMappings.xml
-package.json
 
 .vscode/settings.json
