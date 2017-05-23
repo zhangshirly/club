@@ -33,7 +33,7 @@ var config = {
     // cdn host，如 http://cnodejs.qiniudn.com
     site_static_host: '', // 静态文件存储域名
     // 社区的域名
-    host: '211.159.157.171',
+    host: '211.159.157.171:8088',
     // 默认的Google tracker ID，自有站点请修改，申请地址：http://www.google.com/analytics/
     google_tracker_id: 'UA-7317009-5',
 
