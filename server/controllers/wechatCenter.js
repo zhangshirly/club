@@ -208,7 +208,7 @@ exports.all = function(req, res, next) {
         res.reply([{
             title: 'welcome to Tuateam!',
             description: '前端资讯，有趣解读，尽在Tuateam',
-            picurl: 'http://tuateam.org/public/images/logo-cover.png',
+            picurl: 'http://tuateam.org/public/images/login_bg.png',
             url: 'http://tuateam.org/'
         }]);
     } else {

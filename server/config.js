@@ -188,8 +188,8 @@ var config = {
     setting_binding_page: '/setting/binding',
     wechat_validate: {
         token: 'wechattuateam',
-        appid: 'wx1b2c5479b082f081',
-        encodingAESKey: 'ebc7f2795b78e528ea9535917850e8c2'
+        appid: 'wx1e20ba6481ec1eec',
+        encodingAESKey: 'RFm4eypmKP0H7pl3SW2gP410xzwVPHbZYwKPMfnCTTb'
     },
     wechat_push_num: 1
 };
