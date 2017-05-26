@@ -492,6 +492,28 @@ function getUserToken(options, callback) {
     );
 }
 
+function getUserInfo(options, callback) {
+    request({
+            uri: 'https://api.weixin.qq.com/sns/userinfo',
+            method: 'GET',
+            followRedirect: false,
+            json: true,
+            qs: {
+                access_token: options.access_token,
+                openid: options.openid,
+                lang: 'zh_CN'
+            }
+        },
+        function(error, res, data) {
+            if (data && !error) {
+                callback(null, data);
+            } else {
+                callback(error, null);
+            }
+        }
+    );
+}
+
 function remindSend(options, callback) {
     // var templateId = 'UZG5ge7tdoZJrEi1kHiCkQ__ok27PX1HU_44Jji5iQ8';
     var templateId = options.templateId || 'C90SsdMMbPLp_lewn62WeOT_hO2FDzJG_NxaCeQM75w';

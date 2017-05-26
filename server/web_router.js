@@ -228,12 +228,7 @@ passport.use(new WechatStrategy({
 
 // wechat auth
 router.get('/auth/wechat/auth', passport.authenticate('wechat'));
-// router.get('/auth/wechat/unauth', wechat.unauth);
-router.get('/auth/wechat/auth_back', passport.authenticate('wechat', { failureRedirect: '/sigin' }),
-    function(req, res) {
-        // Successful authentication, redirect home.
-        res.redirect('/');
-    });
+router.get('/auth/wechat/auth_back', passport.authenticate('wechat', { failureRedirect: '/sigin' }), wechatBind.login);
 
 //wechatBind
 router.get('/wechatBind', wechatBind.bind);
