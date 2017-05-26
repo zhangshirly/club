@@ -34,7 +34,9 @@ var weibo = require('./controllers/weibo');
 var admin = require('./controllers/admin');
 var passport = require('passport');
 var passportWeibo = require('passport-weibo');
+var passportWechat = require('passport-wechat');
 var WeiboStrategy = passportWeibo.Strategy;
+var WechatStrategy = passportWechat.Strategy;
 var configMiddleware = require('./middlewares/conf');
 var config = require('./config');
 var wechatBind = require('./controllers/wechatBind');
@@ -191,7 +193,7 @@ router.get('/admin/reply/gen_text', reply.genAllText);
 passport.use(new WeiboStrategy({
     clientID: config.weibo.appKey,
     clientSecret: config.weibo.appSecret,
-    callbackURL: "http://127.0.0.1:3000/auth/weibo/auth_back"
+    callbackURL: config.weibo.authCallback
   },
   function(accessToken, refreshToken, profile, done) {
   	console.log(profile);
@@ -201,6 +203,7 @@ passport.use(new WeiboStrategy({
   }
 ));
 
+// weibo auth
 router.get('/auth/weibo/auth', passport.authenticate('weibo'));
 router.get('/auth/weibo/unauth', weibo.unauth);
 router.get('/auth/weibo/auth_back', passport.authenticate('weibo', { failureRedirect: '/sigin' }),
@@ -208,6 +211,29 @@ router.get('/auth/weibo/auth_back', passport.authenticate('weibo', { failureRedi
     // Successful authentication, redirect home.
     res.redirect('/');
   });
+
+passport.use(new WechatStrategy({
+        appID: config.wechat_validate.appid,
+        name: 'wechat',
+        appSecret: config.wechat_validate.encodingAESKey,
+        client: 'web',
+        callbackURL: 'http://tuateam.org/auth/wechat/auth_back',
+        scope: 'snsapi_userinfo',
+        state: 'wechat'
+    },
+    function(accessToken, refreshToken, profile, done) {
+        return done(err,profile);
+    }
+));
+
+// wechat auth
+router.get('/auth/wechat/auth', passport.authenticate('wechat'));
+// router.get('/auth/wechat/unauth', wechat.unauth);
+router.get('/auth/wechat/auth_back', passport.authenticate('wechat', { failureRedirect: '/sigin' }),
+    function(req, res) {
+        // Successful authentication, redirect home.
+        res.redirect('/');
+    });
 
 //wechatBind
 router.get('/wechatBind', wechatBind.bind);

@@ -33,9 +33,9 @@ var config = {
     // cdn host，如 http://cnodejs.qiniudn.com
     site_static_host: '', // 静态文件存储域名
     // 社区的域名
-    host: '211.159.157.171:8088',
-    // 默认的Google tracker ID，自有站点请修改，申请地址：http://www.google.com/analytics/
-    google_tracker_id: 'UA-7317009-5',
+    host: 'tuateam.org',
+    // Google tracker ID，名称tuateam，申请地址：http://www.google.com/analytics/
+    google_tracker_id: 'UA-100002623-1',
 
     // mongodb 配置
     db: 'mongodb://127.0.0.1/node_club_dev',
@@ -83,20 +83,20 @@ var config = {
     // admin 可删除话题，编辑标签，设某人为达人
     admins: {
         "test": true,  // 测试账号 发布删掉
-        "张颖": true
+        "shirly": true
     },
 
     // github 登陆的配置
     GITHUB_OAUTH: {
-        clientID: 'a32d122e769fae39b898',
-        clientSecret: '9cd819a15a6e886077b5a937aa0e1b8aac55f859',
+        clientID: '940d0760a78fe50e1aaa',
+        clientSecret: '1305f00ba30f4eba3f9a9661ea9832ef16a6db68',
         callbackURL: 'http://tuateam.org/auth/github/callback'
     },
     //本地测试github
     TEST_GITHUB_OAUTH: {
         clientID: 'cb1872e84af2cb965cc8',
         clientSecret: '097d8c85ac8a246abf7dafa94a0c4d78f95db506',
-        callbackURL: 'http://localhost:3000/auth/github/callback'
+        callbackURL: 'http://tuateam.org/auth/github/callback'
     },
     // 是否允许直接注册（否则只能走 github 的方式）
     allow_sign_up: true,
@@ -106,10 +106,10 @@ var config = {
 
     //7牛的access信息，用于文件上传
     qn_access: {
-        accessKey: '1VQoqeNeV4kDaOHO7ajqYZNm-2lgQ093BUBQKC1U',
-        secretKey: 'Q1xh9qaj25Y6jzLt8-4vp5lzbkC9-uAtIOPw02Xj',
-        bucket: 'imweb',
-        domain: 'http://7tszky.com1.z0.glb.clouddn.com'
+        accessKey: 'Wvf2Lvxkb-QZQI9SBO2hvWHVexaTuUag8pjEl5Wh',
+        secretKey: 'TLEQ84z_8MPpvqZdvQGBQ13slizP_G76sCcUgp50',
+        bucket: 'tuateam',
+        domain: 'http://oqjublpec.bkt.clouddn.com'
     },
 
     //文件上传配置
@@ -143,7 +143,9 @@ var config = {
         ['tools', '工具建设'],
         ['op', '运营'],
         ['frame', '基础库'],
-        ['js', 'javascript技术']
+        ['js', 'javascript技术'],
+        ['weekly', '周刊'],
+        ['other', '其他']
     ],
     tabKeys: ['html', 
             'rebuild', 
@@ -160,7 +162,9 @@ var config = {
             'tools', 
             'op', 
             'frame', 
-            'js'],
+            'js',
+            'weekly',
+            'other'],
     loginNotJump: [
         '/active_account', //active page
         '/reset_pass', //reset password page, avoid to reset twice
@@ -181,8 +185,8 @@ var config = {
     // 文章预览的最大长度
     topic_summary_len: 500,
     weibo: {
-        appKey: '3489481381',
-        appSecret: '52410f54674964564a475afc64511e5d',
+        appKey: '2157527702',
+        appSecret: '362673731270319b815dcde9e48797a5',
         authCallback: 'http://tuateam.org/auth/weibo/auth_back'
     },
     setting_binding_page: '/setting/binding',

@@ -72,6 +72,7 @@
         "node-schedule": "0.2.3",
         "cache-manager": "0.18.0",
         "passport-weibo": "*",
+        "passport-wechat": "*",
         "escape-html": "^1.0.3",
         "node-xss": "^0.0.1",
         "wechat": "2.0.2",
