@@ -83,7 +83,8 @@ var config = {
     // admin 可删除话题，编辑标签，设某人为达人
     admins: {
         "test": true,  // 测试账号 发布删掉
-        "shirly": true
+        "shirly": true,
+        "pastest": true
     },
 
     // github 登陆的配置
