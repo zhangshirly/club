@@ -13,7 +13,7 @@ var config = {
         return !this.debug;
     }, // 是否启用静态文件的合并压缩，详见视图中的Loader
 
-    name: '腾讯OMG前端团队 Tuateam | blog | 团队博客', // 社区名字
+    name: 'tuateam前端团队 | blog ', // 社区名字
     description: 'Web前端 腾讯Tuateam 团队社区', // 社区的描述
     keywords: '前端交流,前端社区,前端,iconfont,javascript,html,css,webfront,nodejs, node, express, connect, socket.io',
 
@@ -128,42 +128,36 @@ var config = {
 
     // 版块
     tabs: [
+        ['weekly', '周刊'],
         ['html', 'HTML&HTML5'],
         ['rebuild', 'CSS/重构'],
+        ['js', 'javascript技术'],
         ['network', 'HTTP网络'],
         ['secure', 'Web安全'],
         ['browser', '浏览器'],
-        ['debug', '调试'],
         ['build', '构建工具'],
         ['performance', '性能'],
         ['lib', '前端库'],
-        ['dev', '开发模式'],
         ['node', 'nodeJS全栈'],
         ['mobile', '移动开发'],
         ['tools', '工具建设'],
         ['op', '运营'],
-        ['frame', '基础库'],
-        ['js', 'javascript技术'],
-        ['weekly', '周刊'],
         ['other', '其他']
     ],
-    tabKeys: ['html', 
-            'rebuild', 
-            'network', 
+    tabKeys: ['weekly',
+            'html',
+            'rebuild',
+            'js',
+            'network',
             'secure', 
-            'browser', 
-            'debug', 
+            'browser',
             'build', 
             'performance', 
-            'lib', 
-            'dev', 
+            'lib',
             'node', 
             'mobile', 
             'tools', 
-            'op', 
-            'frame', 
-            'js',
-            'weekly',
+            'op',
             'other'],
     loginNotJump: [
         '/active_account', //active page

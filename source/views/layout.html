@@ -8,9 +8,9 @@
     <meta name="keywords" content="<%= config.keywords %>" />
     <meta name='baidu-site-verification' content='KputUQ9DeD' />
 
-    <meta itemprop="name"content="腾讯imweb前端社区" />
-    <meta itemprop="description"content="腾讯imweb前端社区，Web前端 腾讯IMWeb 团队社区" />
-    <meta itemprop="image"content="http://imweb.io/public/images/logo-white.png" />
+    <meta itemprop="name"content="腾讯tuateam前端社区" />
+    <meta itemprop="description"content="腾讯tuateam前端社区，Web前端 tuateam团队" />
+    <meta itemprop="image"content="http://tuateam.org/public/images/logo-white.png" />
     <%
     var headers = config.site_headers || [];
     for (var i = 0, l = headers.length; i < l; i++) {
@@ -110,16 +110,16 @@
             <ul class="user-sidebar">
                 <% if (typeof(current_user) !== 'undefined') { %>
                     <li class="user-sidebar-item user-publish-btn">
-                      <!-- <a target="_blank" href="/marktang/index?autoOpenInfo=true"><i class="icon iconfont">&#xe600;</i></a> -->
-                      <a href="javascript:void(0);" class="js-btn-publish"><i class="icon iconfont">&#xe600;</i></a>
+                        <a target="_blank" href="/marktang/index?autoOpenInfo=true"><i class="icon iconfont">&#xe600;</i></a>
+                        <!-- <a href="javascript:void(0);" class="js-btn-publish"><i class="icon iconfont">&#xe600;</i></a> -->
                     </li>
                     <li class="user-sidebar-item user-menu">
                         <a id="nav-user-menu" data-name="<%= current_user.loginname %>" class="ui-dropdown user-menu user-slider-btn" href="javascript:void(0);">
-                            <%= current_user.name || current_user.loginname %>
+                              <%= current_user.name || current_user.loginname %>
                         </a>
-                        <ol id="nav-user-menu-layer" 
-                            class="user-menu-layer ui-dropdown-layer ui-dropdown-layer-mini">
-                            <!--<li>-->
+                        <ol id="nav-user-menu-layer"
+                              class="user-menu-layer ui-dropdown-layer ui-dropdown-layer-mini">
+                              <!--<li>-->
                                 <!--<a class="fa fa-user" title="个人中心" -->
                                     <!--href="/user/<%= current_user.loginname %>">个人中心</a>-->
                             <!--</li>-->
@@ -221,7 +221,7 @@
                     <div class="not-sign-r">
                         <div class="to-sign" style="display: none;">
                             <form class="form-horizontal form-valid" id="sign-form-1">
-                                <p class="not-sign-title">注册imweb</p>
+                                <p class="not-sign-title">注册</p>
                                 <div class="input-box">
                                     <input class="input-xsmall fl js-loginname-1" size="15" type="text" value="" placeholder="姓" autocomplete="off" required minlength="1" maxlength="5" name="loginname1">
                                     <input class="input-xsmall fr js-loginname-2" size="15" type="text" value="" placeholder="名" autocomplete="off" required minlength="1" maxlength="5" name="loginname2">
@@ -247,7 +247,7 @@
                         </div>
                         <div class="to-login">
                             <form class="form-horizontal" action="/signin" method="post">
-                                <p class="not-sign-title">登录imweb</p>
+                                <p class="not-sign-title">登录</p>
                                 <input class="input-xlarge" name="name" size="30" type="text" value="" placeholder="姓名/邮箱" autocomplete="off">
                                 <input class="input-xlarge" name="pass" size="30" type="password" placeholder="密码" autocomplete="off">
                                 <div class="ui-button-white js-to-sign">用户注册</div>
@@ -268,10 +268,10 @@
                 </div>
                 <div class="step2" style="display: none;">
                     <div class="not-sign-l">
-                        <p>imweb是<strong>真人前端社区</strong>，填写公司信息能帮助你更好的提升业内影响力。
+                        <p>tuateam是<strong>真人前端社区</strong>，填写公司信息能帮助你更好的提升业内影响力。
                             <br/><strong>公司邮箱</strong>仅作一次性的验证使用，您不必担心信息泄露与垃圾邮件。</p>
                         <br/>
-                        <p>如今，他们已入驻imweb：</p>
+                        <p>如今，他们已入驻tuateam：</p>
                         <% if (typeof(tops) !== 'undefined' && tops.length > 0) { %>
                         <ul class="not-sign-ul">
                             <%- partial('user/famousUser', { collection: tops, as: 'user' }) %>

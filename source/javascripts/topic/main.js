@@ -402,7 +402,7 @@ define([
         var rich_description = $('meta[itemprop = "description"]');
         var rich_image = $('meta[itemprop = "image"]');
 
-        rich_name.attr("content","imweb前端社区文章：" + RICH_META.name);
+        rich_name.attr("content","tuateam前端社区文章：" + RICH_META.name);
         rich_description.attr("content",RICH_META.author +":" +RICH_META.name);
         rich_image.attr("content",RICH_META.img);
     });

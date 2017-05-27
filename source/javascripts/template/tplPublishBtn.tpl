@@ -5,7 +5,7 @@
         <div class="post-type-name"><span class="post-type-name-span">文章</span>
         </div>
       </div>
-      <div class="tab-post-type item" data-index="2" data-post-type="reprint">
+      <!-- <div class="tab-post-type item" data-index="2" data-post-type="reprint">
         <div class="post-type-icon icon-text"><i class="icon iconfont post-type-icon-overlay">&#xe61e;</i></div>
         <div class="post-type-name"><span class="post-type-name-span">转载</span>
         </div>
@@ -24,6 +24,6 @@
         <div class="post-type-icon icon-text"><i class="icon iconfont post-type-icon-overlay">&#xe620;</i></div>
         <div class="post-type-name"><span class="post-type-name-span">(尚未开放)</span>
         </div>
-      </div>
+      </div> -->
     </div>
 </div>

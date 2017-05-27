@@ -4,22 +4,8 @@
             <span class='col_fade'>公告栏</span>
         </div>
         <div class="oa-content">
-            <img src="//imweb.io/public/images/official-account-new.jpg" width="200" height="200" />
-            <p>微信扫码关注imweb公众号</p>
-        </div>
-    </div>
-    <div id="article-sort-panel" class='panel panel-border'>
-        <div class='header'>
-        <span class='col_fade'>文章分类</span>
-        </div>
-            <div class=" tab-header">
-            
-            <% [['all', '全部']].concat(tabs).forEach(function (pair) {
-                var value = pair[0];
-                var text = pair[1]; %>
-            <a href="<%= value && value !== 'all' ? '/tab/' + value : '/' %>"
-              class="topic-tab <%= value === tab ? 'current-tab' : '' %>"><%= text %> (<%= topic_caculate[value] || 0 %>)</a>
-            <% }) %>
+            <img src="/public/images/official-account-new.jpg" width="200" height="200" />
+            <p>微信扫码关注TUA前端公众号</p>
         </div>
     </div>
 
