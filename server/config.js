@@ -110,7 +110,8 @@ var config = {
         accessKey: 'Wvf2Lvxkb-QZQI9SBO2hvWHVexaTuUag8pjEl5Wh',
         secretKey: 'TLEQ84z_8MPpvqZdvQGBQ13slizP_G76sCcUgp50',
         bucket: 'tuateam',
-        domain: 'http://oqjublpec.bkt.clouddn.com'
+        domain: 'http://oqjublpec.bkt.clouddn.com',
+        uploadURL: 'http://up-z1.qiniu.com'
     },
 
     //文件上传配置

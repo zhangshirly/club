@@ -116,7 +116,6 @@ body {
     position: relative;
     height: @nav-height;
     border-bottom: 1px solid @ui-gray;
-    background: @ui-blue;
     &-inner {
         position: relative;
         height: 100%;
@@ -165,6 +164,7 @@ body {
             padding: 0 20px;
             display: inline-block;
             line-height: 68px;
+            height: 100%;
             text-align: center;
             vertical-align: middle;
             border-right: dashed 1px @ui-blue-light;
@@ -225,7 +225,6 @@ body {
             margin-left: 15px;
             line-height: 50px;
             vertical-align: middle;
-            .set-nav-list-item-link();
             .user-avatar {
                 .inline-block();
                 height: 40px;
@@ -246,13 +245,13 @@ body {
     }
     .set-nav-list-item-link() {
         & > a {
-            color: @ui-white;
+            color: @ui-black;
             display: inline-block;
             height: 100%;
             width: 100%;
             & {
                 text-decoration: none;
-                color: @ui-white;
+                color: @ui-black;
             }
             &:visited {
                 text-decoration: none;
@@ -1967,6 +1966,10 @@ textarea.editor {
                 i.iconfont {
                     font-size: 18px;
                     color: @ui-white;
+                }
+                a.iconwrap-wechat {
+                    background-image: url(/public/images/wechat-icon.png);
+                    background-size: 28px 28px;
                 }
             }
         }

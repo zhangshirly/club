@@ -32,9 +32,6 @@
   #footer ,#navbar{
     overflow:hidden;
   }
-  #main{
-    margin-top: 0;
-  }
   .search-form {
     display: none;
   }
@@ -83,8 +80,14 @@
     display: none;
   }
 
+  #content #article-sort-panel.panel {
+    .tab-header {
+      overflow: auto;
+      height: auto;
+    }
+  }
 
-.not-sign {
+  .not-sign {
   height: 354px;
   width: 300px;
 
@@ -208,4 +211,7 @@
     border: 1px solid #DDD;
   }
 
+  #content #article-sort-panel.panel {
+    padding: 0 5px;
+  }
 }
