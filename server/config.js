@@ -13,9 +13,9 @@ var config = {
         return !this.debug;
     }, // 是否启用静态文件的合并压缩，详见视图中的Loader
 
-    name: 'tuateam前端团队 | blog ', // 社区名字
-    description: 'Web前端 腾讯Tuateam 团队社区', // 社区的描述
-    keywords: '前端交流,前端社区,前端,iconfont,javascript,html,css,webfront,nodejs, node, express, connect, socket.io',
+    name: 'TUAteam前端团队 | blog ', // 社区名字
+    description: 'Web前端 腾讯TUAteam 团队社区', // 社区的描述
+    keywords: '前端交流,前端社区,前端,tuateam,iconfont,javascript,html,css,webfront,nodejs, node, express, connect',
 
     // 添加到 html head 中的信息
     site_headers: [
@@ -58,10 +58,10 @@ var config = {
 
     // RSS配置
     rss: {
-        title: 'Tuateam：web技术社区',
+        title: 'TUAteam：web技术社区',
         link: 'http://tuateam.org/',
         language: 'zh-cn',
-        description: 'Tuateam：web技术社区',
+        description: 'TUAteam：web技术社区',
         //最多获取的RSS Item数量
         max_rss_items: 50
     },
